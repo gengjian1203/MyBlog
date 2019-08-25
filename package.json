@@ -5,13 +5,18 @@
   "author": "gengjian1203 <gengjian1203@foxmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --host 0.0.0.0 --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "better-scroll": "^2.0.0-alpha.20",
+    "fastclick": "^1.0.6",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "vue": "^2.5.2",
+    "vue-awesome-swiper": "^3.1.3",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

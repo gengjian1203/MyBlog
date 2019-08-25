@@ -3,8 +3,21 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 引用第三方插件fastclick，修复部分机型点击延迟300毫秒的bug
+import fastclick from 'fastclick'
+// 重置CSS样式
+import 'style/reset.css'
+// 修复1像素边框的bug
+import 'style/border.css'
+// 引用iconfont
+// 引用地方插件VueAwesomeSwiper，展现轮播广告组件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+// 引入Vuex
 
 Vue.config.productionTip = false
+fastclick.attach(document.body)
+Vue.use(VueAwesomeSwiper/*, { default global options } */)
 
 /* eslint-disable no-new */
 new Vue({
