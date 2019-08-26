@@ -10,6 +10,7 @@ import 'style/reset.css'
 // 修复1像素边框的bug
 import 'style/border.css'
 // 引用iconfont
+import 'style/iconfont.css'
 // 引用地方插件VueAwesomeSwiper，展现轮播广告组件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
