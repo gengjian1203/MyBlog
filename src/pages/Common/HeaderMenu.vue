@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-wrap" @click="HandleMenuClose" @touchmove.prevent="">
+  <div class="menu-wrap" @click="HandleMenuClose">
     <div class="menu-left">
       <div class="menu-head border-bottom">
         <div class="menu-left-name">gengjian1203</div>
@@ -30,9 +30,6 @@ export default {
     list: Array
   },
   methods: {
-    HanleItemClick () {
-      console.log('Item click')
-    },
     HandleMenuClose () {
       this.$emit('close')
     }

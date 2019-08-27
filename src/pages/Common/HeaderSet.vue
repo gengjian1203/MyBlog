@@ -14,7 +14,6 @@ export default {
   name: 'HeaderSet',
   methods: {
     HandleSetClose () {
-      console.log('bShow false')
       this.$emit('close')
     },
     HandleBallClick (el) {

@@ -45,19 +45,15 @@ export default {
   },
   methods: {
     HandleMenuClick () {
-      console.log('Menu Click')
       this.bShowMenu = true
     },
     HandleSetClick () {
-      console.log('Set Click')
       this.bShowSet = true
     },
     HandleMenuClose () {
-      console.log('Menu close')
       this.bShowMenu = false
     },
     HandleSetClose () {
-      console.log('Set close')
       this.bShowSet = false
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="icon">
+  <div class="icon" @touchmove.prevent="">
     <common-header :title="arrTitle[nIndex]"></common-header>
     <icon-navigation :title="arrTitle[nIndex]"></icon-navigation>
     <icon-list></icon-list>
@@ -26,7 +26,6 @@ export default {
   computed: {
     nIndex () {
       const n = (parseInt(this.id) % 10000)
-      console.log(n)
       return n
     }
   },
@@ -34,10 +33,6 @@ export default {
     CommonHeader,
     IconNavigation,
     IconList
-  },
-  mounted () {
-    console.log(this.arrTitle)
-    console.log(this.id)
   }
 }
 

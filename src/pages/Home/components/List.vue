@@ -5,21 +5,9 @@
         List title
       </div>
       <ul class="list-data">
-        <li class="list-item border-bottom">
+        <router-link tag="li" :to="'/Paper/' + '00001'" class="list-item border-bottom">
           11111
-        </li>
-        <li class="list-item border-bottom">
-          22222
-        </li>
-        <li class="list-item border-bottom">
-          333333
-        </li>
-        <li class="list-item border-bottom">
-          444444
-        </li>
-        <li class="list-item border-bottom">
-          555555
-        </li>
+        </router-link>
       </ul>
     </div>
   </div>

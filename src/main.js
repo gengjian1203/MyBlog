@@ -15,10 +15,14 @@ import 'style/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 // 引入Vuex
+// 引入mavonEditor
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 
 Vue.config.productionTip = false
 fastclick.attach(document.body)
 Vue.use(VueAwesomeSwiper/*, { default global options } */)
+Vue.use(mavonEditor)
 
 /* eslint-disable no-new */
 new Vue({

@@ -50,6 +50,7 @@ export default {
         })
       } else {
         this.scroll.refresh()
+        this.scroll.scrollTo(0, 0)
       }
     })
   }
@@ -87,6 +88,7 @@ export default {
       }
     }
     .list-tail {
+      box-sizing: border-box;
       width: 100%;
       height: @footer-h;
       padding: 0 @common-space;

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" @touchmove.prevent="">
     <common-header :title="title" :list="Icon"></common-header>
     <div class="wrapper" ref="scroll">
       <div class="content">
@@ -55,7 +55,6 @@ export default {
       const r = res.data
       if (r.ret && r.data) {
         const data = r.data
-        console.log(data)
         this.Shown = data.Shown
         this.Icon = data.Icon
       }
