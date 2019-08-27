@@ -2,28 +2,16 @@
   <div class="list-wrap">
     <div class="list-wrapper" ref="scroll">
       <ul class="list-content">
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
-        <li class="list-item iconfont border-top">&#xe86e;从axios中获取</li>
+        <router-link
+          :to="'/Paper/' + item.id"
+          tag="li"
+          v-for="item of reverseList"
+          :key="item.id"
+          class="list-item border-top"
+        >
+          <p class="list-item-left">{{item.name}}</p>
+          <p class="list-item-right">{{item.date}}</p>
+        </router-link>
         <li class="list-tail border-top">———— 你已经看到我的底线了 ————</li>
       </ul>
     </div>
@@ -38,21 +26,41 @@ import CommonFooter from 'Common/Footer'
 
 export default {
   name: 'IconList',
+  props: {
+    index: Number,
+    list: Array
+  },
+  computed: {
+    reverseList () {
+      let result = []
+      if (this.list) {
+        const tmpList = this.list
+        result = tmpList.reverse()
+        this.refreshScroll()
+      }
+      return result
+    }
+  },
   components: {
     CommonFooter
   },
+  methods: {
+    // 刷新Scroll控件
+    refreshScroll () {
+      setTimeout(() => {
+        if (!this.scroll) {
+          this.scroll = new BScroll(this.$refs.scroll, {
+            click: true,
+            tap: true
+          })
+        } else {
+          this.scroll.refresh()
+          this.scroll.scrollTo(0, 0)
+        }
+      }, 100)
+    }
+  },
   activated () {
-    this.$nextTick(() => {
-      if (!this.scroll) {
-        this.scroll = new BScroll(this.$refs.scroll, {
-          click: true,
-          tap: true
-        })
-      } else {
-        this.scroll.refresh()
-        this.scroll.scrollTo(0, 0)
-      }
-    })
   }
 }
 
@@ -85,6 +93,14 @@ export default {
         height: 0;
         padding: 0 @common-space @list-h @common-space;
         line-height: @list-h;
+        .list-item-left {
+          width: 70%;
+          float: left;
+          @ellipsis();
+        }
+        .list-item-right {
+          float: right;
+        }
       }
     }
     .list-tail {

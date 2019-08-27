@@ -1,12 +1,20 @@
 <template>
   <div class="list-wrap">
     <div class="list-content">
-      <div class="list-title border-bottom">
-        List title
-      </div>
+      <router-link tag="div" :to="'/Icon/' + id" class="list-title border-bottom">
+        {{this.title}}
+      </router-link>
       <ul class="list-data">
-        <router-link tag="li" :to="'/Paper/' + '00001'" class="list-item border-bottom">
-          11111
+        <router-link
+          v-for="(item, index) of list"
+          :key="item.id"
+          v-if="index < 3"
+          tag="li"
+          :to="'/Paper/' + item.id"
+          class="list-item border-bottom"
+        >
+          <p class="list-item-left">{{item.name}}</p>
+          <p class="list-item-right">{{item.date}}</p>
         </router-link>
       </ul>
     </div>
@@ -16,7 +24,17 @@
 <script>
 
 export default {
-  name: 'HomeList'
+  name: 'HomeList',
+  props: {
+    index: Number,
+    title: String,
+    list: Array
+  },
+  computed: {
+    id () {
+      return 20000 + this.index
+    }
+  }
 }
 
 </script>
@@ -44,19 +62,34 @@ export default {
     background: #ffffff;
     border-radius: @common-radius;
     .list-title {
+      box-sizing: border-box;
       width: 100%;
       height: @list-h;
       line-height: @list-h;
       padding: 0 @common-space;
+      @ellipsis();
     }
   }
   .list-data {
     width: 100%;
     .list-item {
+      box-sizing: border-box;
       width: 100%;
       height: @list-h;
       line-height: @list-h;
       padding: 0 @common-space;
+      .list-item-left {
+        width: 70%;
+        float: left;
+        text-align: left;
+        @ellipsis();
+      }
+      .list-item-right {
+        width: 30%;
+        float: right;
+        text-align: right;
+        @ellipsis();
+      }
     }
   }
 }

@@ -2,9 +2,9 @@
   <div class="nav-wrap">
     <router-link to="/" class="nav-text">首页</router-link>
     <div class="nav-text">></div>
-    <router-link to="/Icon/20002" class="nav-text">专栏名称</router-link>
+    <router-link :to="nPath" class="nav-text">{{icon}}</router-link>
     <div class="nav-text">></div>
-    <div class="nav-text">文章名称</div>
+    <div class="nav-text">{{title}}</div>
   </div>
 </template>
 
@@ -13,7 +13,14 @@
 export default {
   name: 'PaperNavigation',
   props: {
+    nIcon: Number,
+    icon: String,
     title: String
+  },
+  computed: {
+    nPath () {
+      return '/Icon/2000' + this.nIcon
+    }
   }
 }
 
@@ -32,7 +39,9 @@ export default {
   background: @common-bg;
   .nav-text {
     float: left;
+    max-width: 30%;
     margin: 0 .1rem;
+    @ellipsis();
   }
 }
 

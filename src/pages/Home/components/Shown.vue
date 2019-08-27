@@ -3,9 +3,9 @@
     <swiper class="shown-content" :options="swiperOption" ref="mySwiper">
       <!-- slides -->
       <swiper-slide v-for="item of list" :key="item.id">
-        <a :href="item.link">
+        <router-link :to="'/Paper/' + item.id">
           <img class="shown-item" :src="item.imgUrl" :alt="item.name">
-        </a>
+        </router-link>
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination" slot="pagination"></div>

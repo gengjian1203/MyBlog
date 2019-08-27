@@ -1,7 +1,7 @@
 <template>
   <div class="header-wrap">
     <div class="header-content">
-      {{this.title}}
+      <div class="header-content-text">{{this.title}}</div>
       <div class="icon iconfont icon-menu" @click="HandleMenuClick">&#xe890;</div>
       <div class="icon iconfont icon-set" @click="HandleSetClick">&#xe892;</div>
     </div>
@@ -106,7 +106,12 @@ export default {
   background: @common-bg;
   .header-content {
     position: relative;
-      .icon {
+    .header-content-text {
+      width: 70%;
+      margin: 0 auto;
+      @ellipsis();
+    }
+    .icon {
       position: absolute;
       top: 0;
       font-weight: bold;

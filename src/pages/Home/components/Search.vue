@@ -1,13 +1,18 @@
 <template>
   <div class="search-wrap">
-    <input class="search-input" type="text" placeholder="请输入你要搜索的内容"/>
+    <input class="search-input" type="text" placeholder="请输入你要搜索的内容" v-model="strSearch"/>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'HomeSearch'
+  name: 'HomeSearch',
+  data () {
+    return {
+      strSearch: ''
+    }
+  }
 }
 
 </script>

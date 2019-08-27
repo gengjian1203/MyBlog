@@ -1,13 +1,14 @@
 <template>
   <div class="icon" @touchmove.prevent="">
-    <common-header :title="arrTitle[nIndex]"></common-header>
-    <icon-navigation :title="arrTitle[nIndex]"></icon-navigation>
-    <icon-list></icon-list>
+    <common-header v-if="arrMenu.length" :title="arrMenu[nIndex].name" :list="arrMenu"></common-header>
+    <icon-navigation v-if="arrMenu.length" :title="arrMenu[nIndex].name"></icon-navigation>
+    <icon-list v-if="arrList.length" :index="nIndex" :list="arrList[nIndex]"></icon-list>
   </div>
 </template>
 
 <script>
 
+import axios from 'axios'
 import CommonHeader from 'Common/Header'
 import IconNavigation from './components/Navigation'
 import IconList from './components/List'
@@ -19,8 +20,8 @@ export default {
   },
   data () {
     return {
-      arrTitle: ['HTTP专栏', 'CSS专栏', 'JavaScript专栏', 'Vue专栏', 'Node专栏',
-        'C++专栏', '算法专栏', '设计模式专栏', '逆向与破解专栏', '常用工具专栏']
+      arrMenu: [],
+      arrList: []
     }
   },
   computed: {
@@ -33,6 +34,25 @@ export default {
     CommonHeader,
     IconNavigation,
     IconList
+  },
+  methods: {
+    getIconInfo () {
+      // 本地调用
+      axios.get('/api/icon.json').then(this.getIconInfoSucc)
+      // 远程调用
+      // axios.get('https://raw.githubusercontent.com/gengjian1203/MyBlog/master/static/mock/icon.json').then(this.getIconInfoSucc)
+    },
+    getIconInfoSucc (res) {
+      const r = res.data
+      if (r.ret && r.data) {
+        const data = r.data
+        this.arrMenu = data.Icon
+        this.arrList = data.File
+      }
+    }
+  },
+  mounted () {
+    this.getIconInfo()
   }
 }
 

@@ -6,7 +6,7 @@
         <div class="menu-left-text">You can either travel or read, but either your body or soul must be on the way.</div>
       </div>
       <ul class="menu-data">
-        <router-link to="/" tag="li" class="menu-item border-bottom">首页</router-link>
+        <router-link to="/" tag="li" class="menu-bold menu-item border-bottom">首页</router-link>
         <router-link
           v-for="item of list"
           :key="item.id"
@@ -59,11 +59,13 @@ export default {
       height: calc(@title-h * 2);
       text-align: left;
       .menu-left-name {
+        color: @common-bg;
         font-size: @menu-name-size;
         line-height: @menu-name-size;
         padding: @common-space;
       }
       .menu-left-text {
+        color: @common-bg;
         font-size: @menu-text-size;
         line-height: @menu-text-size;
         padding: 0 @common-space;
@@ -71,6 +73,9 @@ export default {
     }
     .menu-data {
       width: 100%;
+      .menu-bold {
+        font-weight: bold;
+      }
       .menu-item {
         box-sizing: border-box;
         width: 100%;
@@ -79,6 +84,7 @@ export default {
         font-size: @menu-list-size;
         text-align: left;
         padding: 0 @common-space;
+        @ellipsis();
       }
     }
   }

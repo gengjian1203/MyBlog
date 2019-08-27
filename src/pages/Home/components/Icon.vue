@@ -5,8 +5,9 @@
       <swiper-slide class="icon-page">
         <router-link
           tag="div"
-          v-for="item of list"
+          v-for="(item, index) of list"
           :key="item.id"
+          v-if="index < 10"
           :to="'/Icon/' + item.id"
           class="icon-item"
         >
@@ -76,9 +77,12 @@ export default {
           background: @common-clr;
           box-shadow: 0px 0px .2rem .05rem @common-clr;
           border-radius: 50%;
+          @ellipsis();
         }
         .icon-item-name {
+          width: 100%;
           font-size: @icon-item-name-size;
+          @ellipsis();
         }
       }
     }

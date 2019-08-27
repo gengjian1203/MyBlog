@@ -25,7 +25,12 @@ export default {
   border-top: 1px solid #999999;
   text-align: center;
   .footer-text {
+    box-sizing: border-box;
+    width: 100%;
+    height: @footer-size-h;
+    font-size: @footer-size;
     margin-top: @footer-space;
+    @ellipsis();
   }
 }
 

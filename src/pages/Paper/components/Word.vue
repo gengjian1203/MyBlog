@@ -17,6 +17,9 @@ import CommonFooter from 'Common/Footer'
 
 export default {
   name: 'PaperWord',
+  props: {
+    strUrl: String
+  },
   data () {
     return {
       source: ''
@@ -28,15 +31,9 @@ export default {
   methods: {
     HandleDataChange (value, render) {
     },
-    getWordInfo () {
-      axios.get('static/paper/README.md').then(this.getWordInfoSucc)
-    },
-    getWordInfoSucc (res) {
-      // 页面加载md数据
-      this.source = DOMPurify.sanitize(marked(res.data || ''))
-      // 初始化BScroll组件
+    // 刷新Scroll控件
+    refreshScroll () {
       setTimeout(() => {
-        // 加载BScroll
         if (!this.scroll) {
           this.scroll = new BScroll(this.$refs.scroll, {
             click: true,
@@ -46,7 +43,16 @@ export default {
           this.scroll.refresh()
           this.scroll.scrollTo(0, 0)
         }
-      }, 200)
+      }, 100)
+    },
+    getWordInfo () {
+      axios.get(this.strUrl).then(this.getWordInfoSucc)
+    },
+    getWordInfoSucc (res) {
+      // 页面加载md数据，并且进行杀菌处理
+      this.source = DOMPurify.sanitize(marked(res.data || ''))
+      // 初始化BScroll组件
+      this.refreshScroll()
     }
   },
   activated () {
