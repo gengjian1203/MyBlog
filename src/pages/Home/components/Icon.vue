@@ -3,46 +3,16 @@
     <swiper class="icon-content" :options="swiperOption" ref="mySwiper">
       <!-- slides -->
       <swiper-slide class="icon-page">
-        <div class="icon-item">
-          <div class="icon-item-circle">H</div>
-          <p class="icon-item-name">Html</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon-item-circle">C</div>
-          <p class="icon-item-name">CSS</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon-item-circle">JS</div>
-          <p class="icon-item-name">JavaScript</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon-item-circle">V</div>
-          <p class="icon-item-name">Vue</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon-item-circle">N</div>
-          <p class="icon-item-name">Node</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon-item-circle">C</div>
-          <p class="icon-item-name">C++</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon-item-circle">算</div>
-          <p class="icon-item-name">经典算法</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon-item-circle">设</div>
-          <p class="icon-item-name">设计模式</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon-item-circle">逆</div>
-          <p class="icon-item-name">逆向与破解</p>
-        </div>
-        <div class="icon-item">
-          <div class="icon-item-circle">工</div>
-          <p class="icon-item-name">常用工具</p>
-        </div>
+        <router-link
+          tag="div"
+          v-for="item of list"
+          :key="item.id"
+          :to="'/Icon/' + item.id"
+          class="icon-item"
+        >
+          <div class="icon-item-circle">{{item.logo}}</div>
+          <p class="icon-item-name">{{item.name}}</p>
+        </router-link>
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
@@ -54,6 +24,9 @@
 
 export default {
   name: 'HomeIcon',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {

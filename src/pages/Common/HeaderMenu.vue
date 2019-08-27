@@ -1,23 +1,24 @@
 <template>
-  <div class="menu-wrap" @touchmove.prevent="">
+  <div class="menu-wrap" @click="HandleMenuClose" @touchmove.prevent="">
     <div class="menu-left">
       <div class="menu-head border-bottom">
         <div class="menu-left-name">gengjian1203</div>
         <div class="menu-left-text">You can either travel or read, but either your body or soul must be on the way.</div>
       </div>
       <ul class="menu-data">
-        <li class="menu-item border-bottom" @click="HanleItemClick">111</li>
-        <li class="menu-item border-bottom" @click="HanleItemClick">111</li>
-        <li class="menu-item border-bottom" @click="HanleItemClick">111</li>
-        <li class="menu-item border-bottom" @click="HanleItemClick">111</li>
-        <li class="menu-item border-bottom" @click="HanleItemClick">111</li>
-        <li class="menu-item border-bottom" @click="HanleItemClick">111</li>
-        <li class="menu-item border-bottom" @click="HanleItemClick">111</li>
-        <li class="menu-item border-bottom" @click="HanleItemClick">111</li>
-        <li class="menu-item border-bottom" @click="HanleItemClick">111</li>
+        <router-link to="/" tag="li" class="menu-item border-bottom">首页</router-link>
+        <router-link
+          v-for="item of list"
+          :key="item.id"
+          :to="'/Icon/' + item.id"
+          tag="li"
+          class="menu-item border-bottom iconfont"
+        >
+          &#xe86e;{{item.name}}
+        </router-link>
       </ul>
     </div>
-    <div class="menu-right" @click="HandleMenuClose"></div>
+    <div class="menu-right"></div>
   </div>
 </template>
 
@@ -25,6 +26,9 @@
 
 export default {
   name: 'HeaderMenu',
+  props: {
+    list: Array
+  },
   methods: {
     HanleItemClick () {
       console.log('Item click')

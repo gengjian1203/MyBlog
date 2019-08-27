@@ -7,7 +7,13 @@
     </div>
     <!-- menu -->
     <transition name="menu">
-      <header-menu class="header-pop" v-show="bShowMenu" @close="HandleMenuClose"></header-menu>
+      <header-menu
+        :list="list"
+        class="header-pop"
+        v-show="bShowMenu"
+        @close="HandleMenuClose"
+      >
+      </header-menu>
     </transition>
     <!-- set -->
     <transition name="set">
@@ -22,9 +28,10 @@ import HeaderMenu from './HeaderMenu'
 import HeaderSet from './HeaderSet'
 
 export default {
-  name: 'HomeHeader',
+  name: 'CommonHeader',
   props: {
-    title: String
+    title: String,
+    list: Array
   },
   data () {
     return {
@@ -73,7 +80,7 @@ export default {
 @keyframes set-moveIn {
   from {
     transform-origin: right top;
-    transform: rotate(180deg)
+    transform: rotate(90deg)
   }
   to {
     transform-origin: right top;
@@ -83,9 +90,6 @@ export default {
 
 .menu-enter-active {
   animation: menu-moveIn .5s;
-}
-.menu-leave-active {
-  animation: menu-moveIn .5s reverse;
 }
 
 .set-enter-active {

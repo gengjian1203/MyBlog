@@ -1,13 +1,14 @@
 <template>
   <div class="footer-wrap">
-    <p>made by gengjian1203</p>
+    <p class="footer-text">made by gengjian1203</p>
+    <p class="footer-text">E-mail:<span><a href="mailto:gengjian1203@foxmail.com">gengjian1203@foxmail.com</a></span></p>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'HomeFooter'
+  name: 'CommonFooter'
 }
 
 </script>
@@ -23,6 +24,9 @@ export default {
   background: @common-bg;
   border-top: 1px solid #999999;
   text-align: center;
+  .footer-text {
+    margin-top: @footer-space;
+  }
 }
 
 </style>
