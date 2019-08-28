@@ -27,6 +27,8 @@ export default {
   background: @common-bg;
   .search-input {
     box-sizing: border-box;
+    position: relative;
+    top: .1rem;
     width: 100%;
     height: calc(@title-h - .2rem);
     line-height: calc(@title-h - .2rem);

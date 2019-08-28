@@ -22,6 +22,7 @@
 
 <script>
 
+import { mapState } from 'vuex'
 import axios from 'axios'
 import BScroll from '@better-scroll/core'
 
@@ -36,6 +37,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['nDev']),
     bShowNone () {
       return (!this.listResult.length && this.strSearch)
     }
@@ -82,10 +84,13 @@ export default {
       }, 100)
     },
     getSearchInfo () {
-      // 本地调用
-      axios.get('/api/icon.json').then(this.getSearchInfoSucc)
-      // 远程调用
-      // axios.get('https://raw.githubusercontent.com/gengjian1203/MyBlog/master/static/mock/icon.json').then(this.getSearchInfoSucc)
+      if (this.nDev) {
+        // 本地调用
+        axios.get('/api/icon.json').then(this.getSearchInfoSucc)
+      } else {
+        // 远程调用
+        axios.get('https://raw.githubusercontent.com/gengjian1203/MyBlog/master/static/mock/icon.json').then(this.getSearchInfoSucc)
+      }
     },
     getSearchInfoSucc (res) {
       const r = res.data

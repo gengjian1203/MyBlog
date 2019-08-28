@@ -19,6 +19,7 @@
 
 <script>
 
+import { mapState } from 'vuex'
 import axios from 'axios'
 import CommonHeader from 'Common/Header'
 import PaperNavigation from './components/Navigation'
@@ -36,6 +37,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['nDev']),
     nIcon () {
       return Math.floor(parseInt(this.id) / 10000)
     },
@@ -53,9 +55,13 @@ export default {
   },
   methods: {
     getPaperInfo () {
-      axios.get('/api/paper.json').then(this.getPaperInfoSucc)
-      // 远程调用
-      // axios.get('https://raw.githubusercontent.com/gengjian1203/MyBlog/master/static/mock/paper.json').then(this.getPaperInfoSucc)
+      if (this.nDev) {
+        // 本地调用
+        axios.get('/api/paper.json').then(this.getPaperInfoSucc)
+      } else {
+        // 远程调用
+        axios.get('https://raw.githubusercontent.com/gengjian1203/MyBlog/master/static/mock/paper.json').then(this.getPaperInfoSucc)
+      }
     },
     getPaperInfoSucc (res) {
       const r = res.data

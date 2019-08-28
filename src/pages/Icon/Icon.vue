@@ -8,6 +8,7 @@
 
 <script>
 
+import { mapState } from 'vuex'
 import axios from 'axios'
 import CommonHeader from 'Common/Header'
 import IconNavigation from './components/Navigation'
@@ -25,6 +26,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['nDev']),
     nIndex () {
       const n = (parseInt(this.id) % 10000)
       return n
@@ -37,10 +39,13 @@ export default {
   },
   methods: {
     getIconInfo () {
-      // 本地调用
-      axios.get('/api/icon.json').then(this.getIconInfoSucc)
-      // 远程调用
-      // axios.get('https://raw.githubusercontent.com/gengjian1203/MyBlog/master/static/mock/icon.json').then(this.getIconInfoSucc)
+      if (this.nDev) {
+        // 本地调用
+        axios.get('/api/icon.json').then(this.getIconInfoSucc)
+      } else {
+        // 远程调用
+        axios.get('https://raw.githubusercontent.com/gengjian1203/MyBlog/master/static/mock/icon.json').then(this.getIconInfoSucc)
+      }
     },
     getIconInfoSucc (res) {
       const r = res.data

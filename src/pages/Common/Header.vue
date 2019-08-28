@@ -48,7 +48,7 @@ export default {
       this.bShowMenu = true
     },
     HandleSetClick () {
-      this.bShowSet = true
+      // this.bShowSet = true
     },
     HandleMenuClose () {
       this.bShowMenu = false

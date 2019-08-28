@@ -1,23 +1,27 @@
 <template>
   <div class="set-wrap" @click="HandleSetClose" @touchmove.prevent="">
-    <div id="red" class="ball red" @click="HandleBallClick"></div>
-    <div id="blue" class="ball blue" @click="HandleBallClick"></div>
-    <div id="green" class="ball green" @click="HandleBallClick"></div>
-    <div id="yellow" class="ball yellow" @click="HandleBallClick"></div>
-    <div id="purple" class="ball purple" @click="HandleBallClick"></div>
+    <div id="0" class="ball red" @click="HandleBallClick"></div>
+    <div id="1" class="ball blue" @click="HandleBallClick"></div>
+    <div id="2" class="ball green" @click="HandleBallClick"></div>
+    <div id="3" class="ball yellow" @click="HandleBallClick"></div>
+    <div id="4" class="ball purple" @click="HandleBallClick"></div>
   </div>
 </template>
 
 <script>
 
+// import { mapState, mapActions } from 'vuex'
+
 export default {
   name: 'HeaderSet',
   methods: {
+    // ...mapActions(['HandleSelectColor']),
     HandleSetClose () {
       this.$emit('close')
     },
     HandleBallClick (el) {
-      console.log(el.target.id)
+      // this.HandleSelectColor(parseInt(el.target.id))
+      console.log(parseInt(el.target.id))
     }
   }
 }
