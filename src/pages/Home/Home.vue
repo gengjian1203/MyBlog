@@ -3,7 +3,7 @@
     <common-header v-if="Icon.length" :title="title" :list="Icon"></common-header>
     <div class="wrapper" ref="scroll">
       <div class="content">
-        <home-search></home-search>
+        <home-search :list="List"></home-search>
         <home-shown :list="Shown"></home-shown>
         <home-icon :list="Icon"></home-icon>
         <home-list

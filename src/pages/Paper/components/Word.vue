@@ -1,7 +1,9 @@
 <template>
   <div class="word-wrap">
-    <div class="word-wrapper" ref="scroll">
-      <mavon-editor class="word-content" v-html="source" :subfield="false" defaultOpen="preview" :toolbarsFlag="false" :boxShadow="false" @change="HandleDataChange"/>
+    <div>
+      <div class="word-wrapper" ref="scroll">
+        <mavon-editor class="word-content" v-html="source" :subfield="false" defaultOpen="preview" :toolbarsFlag="false" :boxShadow="false"/>
+      </div>
     </div>
     <common-footer class="word-footer"></common-footer>
   </div>
@@ -29,8 +31,6 @@ export default {
     CommonFooter
   },
   methods: {
-    HandleDataChange (value, render) {
-    },
     // 刷新Scroll控件
     refreshScroll () {
       setTimeout(() => {
@@ -52,8 +52,15 @@ export default {
       // 页面加载md数据，并且进行杀菌处理
       this.source = DOMPurify.sanitize(marked(res.data || ''))
       // 初始化BScroll组件
-      this.refreshScroll()
+      setTimeout(() => {
+        this.refreshScroll()
+      }, 500)
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.getWordInfo()
+    })
   },
   activated () {
     this.$nextTick(() => {

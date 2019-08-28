@@ -1,19 +1,19 @@
 <template>
   <div class="paper"  @touchmove.prevent="">
     <common-header
-      v-if="List.length && Icon.length"
+      v-if="bIf"
       :title="List[nIcon][nPaper].name"
       :list="Icon"
     >
     </common-header>
     <paper-navigation
-      v-if="List.length && Icon.length"
+      v-if="bIf"
       :nIcon="nIcon"
       :icon="Icon[nIcon].name"
       :title="List[nIcon][nPaper].name"
     >
     </paper-navigation>
-    <paper-word v-if="List.length && Icon.length" :strUrl="List[nIcon][nPaper].path"></paper-word>
+    <paper-word v-if="bIf" :strUrl="List[nIcon][nPaper].path"></paper-word>
   </div>
 </template>
 
@@ -41,6 +41,9 @@ export default {
     },
     nPaper () {
       return Math.floor(parseInt(this.id) % 10000)
+    },
+    bIf () {
+      return this.List.length && this.Icon.length
     }
   },
   components: {
