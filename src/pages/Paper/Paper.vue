@@ -1,5 +1,5 @@
 <template>
-  <div class="paper"  @touchmove.prevent="">
+  <div class="paper" @touchmove.prevent="">
     <common-header
       v-if="bIf"
       :title="List[nIcon][nPaper].name"

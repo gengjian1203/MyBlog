@@ -75,6 +75,20 @@ export default {
 
 @import "~style/normal.less";
 
+.word-wrap /deep/ .language-bash,
+.word-wrap /deep/ .language-html,
+.word-wrap /deep/ .language-css,
+.word-wrap /deep/ .language-javascript,
+.word-wrap /deep/ .language-c,
+.word-wrap /deep/ .language-python,
+.word-wrap /deep/ .language-java,
+.word-wrap /deep/ .language-matlab,
+ {
+  overflow: hidden;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
 .word-wrap {
   .word-wrapper {
     overflow: hidden;
