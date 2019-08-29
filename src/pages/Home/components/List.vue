@@ -1,9 +1,9 @@
 <template>
   <div class="list-wrap">
     <div class="list-content">
-      <router-link tag="div" :to="'/Icon/' + id" class="list-title border-bottom">
+      <div class="list-title border-bottom">
         {{this.title}}
-      </router-link>
+      </div>
       <ul class="list-data">
         <router-link
           v-for="(item, index) of list"
@@ -15,6 +15,9 @@
         >
           <p class="list-item-left">{{item.name}}</p>
           <p class="list-item-right">{{item.date}}</p>
+        </router-link>
+        <router-link tag="div" :to="'/Icon/' + id" class="list-item list-more">
+          点击查看更多
         </router-link>
       </ul>
     </div>
@@ -90,6 +93,9 @@ export default {
         text-align: right;
         @ellipsis();
       }
+    }
+    .list-more {
+      text-align: center;
     }
   }
 }

@@ -1,11 +1,12 @@
-### MyBlog
+### Mould
+---
 
 展示链接[点此进入](https://github.com/gengjian1203)
-#### 一. 问题引入 [Situation]
+#### 一. 问题情况 [SITUATION]
 啦啦啦啦啦啦啦啦啦啦啦啦啦啦，啦绿绿绿啦啦啦啦啦啦啦啦绿绿。绿绿绿绿啦啦啦啦啦啦啦啦，啦啦啦啦啦。啦啦绿绿绿啦啦啦啦啦啦啦啦绿绿绿绿绿绿啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦绿绿绿啦啦啦啦啦啦啦啦绿绿绿绿绿绿啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦绿绿绿啦啦啦啦啦啦啦啦绿绿绿绿绿绿啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦绿绿绿啦啦啦啦啦啦啦啦绿绿绿绿绿绿
-#### 二. 解决方法 [Task]
+#### 二. 任务目标 [TASK]
 
-#### 三. 代码实现 [Action]
+#### 三. 代码实现 [ACTION]
 ``` javascript
 function fun () {
   var a = "Hello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello Wolrd";
@@ -26,4 +27,4 @@ npm run build
 npm run build --report
 ```
 
-#### 四. 问题总结 [Result]
+#### 四. 结论总结 [RESULT]

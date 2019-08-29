@@ -1,6 +1,6 @@
 <template>
   <div class="footer-wrap">
-    <p class="footer-text">made by gengjian1203</p>
+    <p class="footer-text">made by <span><a href="https://github.com/gengjian1203">gengjian1203</a></span></p>
     <p class="footer-text">E-mail:<span><a href="mailto:gengjian1203@foxmail.com">gengjian1203@foxmail.com</a></span></p>
   </div>
 </template>
