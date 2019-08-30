@@ -76,20 +76,20 @@
       "path": "static/paper/paper_02_0000.md"
     }, {
       "id": "20001",
-      "name": "关于JavaScript1",
-      "path": "static/paper/Mould.md"
+      "name": "关于函数节流",
+      "path": "static/paper/paper_02_0001.md"
     }, {
       "id": "20002",
       "name": "关于JavaScript2",
       "path": "static/paper/Mould.md"
     }], [{
       "id": "30000",
-      "name": "关于Vue0",
-      "path": "static/paper/Mould.md"
+      "name": "Vue-CLI 3.x创建工程及解读工程结构",
+      "path": "static/paper/paper_03_0000.md"
     }, {
       "id": "30001",
-      "name": "关于Vue1",
-      "path": "static/paper/Mould.md"
+      "name": "Vue组件的结构与生命周期钩子",
+      "path": "static/paper/paper_03_0001.md"
     }, {
       "id": "30002",
       "name": "关于Vue2",
@@ -120,11 +120,11 @@
       "path": "static/paper/Mould.md"
     }], [{
       "id": "60000",
-      "name": "关于A*算法",
-      "path": "static/paper/Mould.md"
+      "name": "数组的求和(reduce)",
+      "path": "static/paper/paper_06_0000.md"
     }, {
       "id": "60001",
-      "name": "关于排序-冒泡法",
+      "name": "关于A*算法",
       "path": "static/paper/Mould.md"
     }], [{
       "id": "70000",

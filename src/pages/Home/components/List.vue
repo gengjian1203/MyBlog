@@ -2,7 +2,7 @@
   <div class="list-wrap">
     <div class="list-content">
       <div class="list-title border-bottom">
-        {{this.title}}
+        {{this.title}}<span class="list-title-total">（共 {{list.length}} 篇）</span>
       </div>
       <ul class="list-data">
         <router-link
@@ -71,6 +71,9 @@ export default {
       line-height: @list-h;
       padding: 0 @common-space;
       @ellipsis();
+      .list-title-total {
+        margin-left: @common-space;
+      }
     }
   }
   .list-data {

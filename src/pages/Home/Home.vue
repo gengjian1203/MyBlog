@@ -7,7 +7,6 @@
         <home-shown :list="Shown"></home-shown>
         <home-icon :list="Icon"></home-icon>
         <home-list
-          v-if="index < 11"
           v-for="(item, index) of reverseList"
           :key="item.id"
           :index="index"

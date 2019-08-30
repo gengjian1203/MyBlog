@@ -1,6 +1,6 @@
 <template>
   <div class="shown-wrap">
-    <swiper class="shown-content" :options="swiperOption" ref="mySwiper">
+    <swiper class="shown-content" v-if="bShowSwiper" :options="swiperOption" ref="mySwiper">
       <!-- slides -->
       <swiper-slide v-for="item of list" :key="item.id">
         <router-link :to="'/Paper/' + item.id">
@@ -23,21 +23,21 @@ export default {
   data () {
     return {
       swiperOption: {
-        pagination: {
-          el: '.swiper-pagination'
-        },
-        observer: true,
-        observeParents: true,
+        pagination: '.swiper-pagination',
         // 循环滚动
         loop: true,
-        // 自动轮播2.5s/图
-        autoplay: {
-          delay: 2500,
-          stopOnLastSlide: false,
-          // 点击Swiper后不自动停止
-          disableOnInteraction: false
-        }
+        // 自动轮播2s/图
+        autoplay: 2000,
+        // 点击Banner后仍能自动轮播
+        autoplayDisableOnInteraction: false,
+        observer: true,
+        observeParents: true
       }
+    }
+  },
+  computed: {
+    bShowSwiper () {
+      return this.list.length
     }
   }
 }

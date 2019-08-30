@@ -2,7 +2,7 @@
   <div class="word-wrap">
     <div>
       <div class="word-wrapper" ref="scroll">
-        <mavon-editor class="word-content" v-html="source" :subfield="false" defaultOpen="preview" :toolbarsFlag="false" :boxShadow="false"/>
+        <mavon-editor ref="editor" class="word-content" v-html="source" :subfield="false" defaultOpen="preview" :toolbarsFlag="false" :boxShadow="false"/>
       </div>
     </div>
     <common-footer class="word-footer"></common-footer>
@@ -52,6 +52,9 @@ export default {
       // 页面加载md数据，并且进行杀菌处理
       this.source = DOMPurify.sanitize(marked(res.data || ''))
       // 初始化BScroll组件
+      // this.$refs.editor.$nextTick(() => {
+      //   this.refreshScroll()
+      // })
       setTimeout(() => {
         this.refreshScroll()
       }, 500)
@@ -75,7 +78,9 @@ export default {
 
 @import "~style/normal.less";
 
+.word-wrap /deep/ .language,
 .word-wrap /deep/ .language-bash,
+.word-wrap /deep/ .language-json,
 .word-wrap /deep/ .language-html,
 .word-wrap /deep/ .language-css,
 .word-wrap /deep/ .language-javascript,
