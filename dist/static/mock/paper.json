@@ -108,8 +108,8 @@
       "path": "static/paper/Mould.md"
     }], [{
       "id": "50000",
-      "name": "关于C++0",
-      "path": "static/paper/Mould.md"
+      "name": "Web状态码",
+      "path": "static/paper/paper_05_0000.md"
     }, {
       "id": "50001",
       "name": "关于C++1",
@@ -141,7 +141,7 @@
     }], [{
       "id": "90000",
       "name": "git的常用命令",
-      "path": "static/paper/Mould.md"
+      "path": "static/paper/paper_09_0000.md"
     }, {
       "id": "90001",
       "name": "Chrome Developer Tools的常用操作",
