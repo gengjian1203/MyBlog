@@ -92,8 +92,8 @@
       "path": "static/paper/paper_03_0001.md"
     }, {
       "id": "30002",
-      "name": "关于Vue2",
-      "path": "static/paper/Mould.md"
+      "name": "Vue的自定义指令",
+      "path": "static/paper/paper_03_0002.md"
     }], [{
       "id": "40000",
       "name": "关于Node0",
@@ -128,8 +128,8 @@
       "path": "static/paper/Mould.md"
     }], [{
       "id": "70000",
-      "name": "关于单例模式",
-      "path": "static/paper/Mould.md"
+      "name": "异步解决方案之Promise",
+      "path": "static/paper/paper_07_0000.md"
     }, {
       "id": "70001",
       "name": "关于工厂模式",

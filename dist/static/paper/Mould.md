@@ -1,13 +1,13 @@
-### Mould
+### Mould  
 ---
 
 展示链接[点此进入](https://github.com/gengjian1203)  
 ![Result](readme/result1.png "作品展示Day54")
-#### 一. 问题情况 [SITUATION]
+#### 一. 问题情况 [SITUATION]  
 啦啦啦啦啦啦啦啦啦啦啦啦啦啦，啦绿绿绿啦啦啦啦啦啦啦啦绿绿。绿绿绿绿啦啦啦啦啦啦啦啦，啦啦啦啦啦。啦啦绿绿绿啦啦啦啦啦啦啦啦绿绿绿绿绿绿啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦绿绿绿啦啦啦啦啦啦啦啦绿绿绿绿绿绿啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦绿绿绿啦啦啦啦啦啦啦啦绿绿绿绿绿绿啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦绿绿绿啦啦啦啦啦啦啦啦绿绿绿绿绿绿
-#### 二. 任务目标 [TASK]
+#### 二. 任务目标 [TASK]  
 
-#### 三. 代码实现 [ACTION]
+#### 三. 代码实现 [ACTION]  
 ``` javascript
 function fun () {
   var a = "Hello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello WolrdHello Wolrd";
@@ -28,4 +28,4 @@ npm run build
 npm run build --report
 ```
 
-#### 四. 结论总结 [RESULT]
+#### 四. 结论总结 [RESULT]  

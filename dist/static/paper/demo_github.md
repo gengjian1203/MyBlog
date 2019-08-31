@@ -1,4 +1,4 @@
-### MyBlog
+### MyBlog  
 ---
 > “不忘初心,方得始终。”——《华严经》
 
@@ -15,7 +15,7 @@ Blog展示链接[[点此进入]](https://gengjian1203.github.io/MyBlog/dist/#/)
 为了记录这一路走来我的成长。
 为了能够帮助需要帮助的人。
 
-#### 二. 任务目标 [TASK]
+#### 二. 任务目标 [TASK]  
 本着打好基础的想法，这个博客使用的技术，尽量做深、做透、做精。  
 感谢github平台，在Setting中的Page功能，给了我一个构建静态展示网站的机会。  
 这个项目用到的技术有：  
@@ -35,10 +35,10 @@ Blog展示链接[[点此进入]](https://gengjian1203.github.io/MyBlog/dist/#/)
 * bebel-polyfill  
 * ESLink  
 
-#### 三. 代码实现 [ACTION]
+#### 三. 代码实现 [ACTION]  
 博客源码[[点此进入]](https://github.com/gengjian1203/MyBlog)
 
-#### 四. 结论总结 [RESULT]
+#### 四. 结论总结 [RESULT]  
 九层之台，起于垒土；千里之行，始于足下。
 正所谓种一棵树最好的时间是十年前，其次是现在。  
 这也让我终于下定了决心，开始着手去做这件事。  
