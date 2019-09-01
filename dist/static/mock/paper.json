@@ -64,12 +64,12 @@
       "path": "static/paper/paper_01_0000.md"
     }, {
       "id": "10001",
-      "name": "关于CSS1",
-      "path": "static/paper/Mould.md"
+      "name": "聊聊CSS的盒子模型",
+      "path": "static/paper/paper_01_0001.md"
     }, {
       "id": "10002",
-      "name": "关于CSS2",
-      "path": "static/paper/Mould.md"
+      "name": "简单说说标准模式与怪异模式",
+      "path": "static/paper/paper_01_0002.md"
     }], [{
       "id": "20000",
       "name": "关于函数防抖",
@@ -112,8 +112,8 @@
       "path": "static/paper/paper_05_0000.md"
     }, {
       "id": "50001",
-      "name": "关于C++1",
-      "path": "static/paper/Mould.md"
+      "name": "主流浏览器及其内核",
+      "path": "static/paper/paper_05_0001.md"
     }, {
       "id": "50002",
       "name": "关于C++2",
