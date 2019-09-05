@@ -12,9 +12,10 @@
           :key="item.id"
           :to="'/Icon/' + item.id"
           tag="li"
-          class="menu-item border-bottom iconfont"
+          class="menu-item border-bottom"
         >
-          &#xe86e;{{item.name}}
+          <span class="menu-item-logo iconfont">&#xe739;</span>
+          {{item.name}}
         </router-link>
       </ul>
     </div>
@@ -85,6 +86,9 @@ export default {
         text-align: left;
         padding: 0 @common-space;
         @ellipsis();
+        .menu-item-logo {
+          margin-right: 0 @common-space;
+        }
       }
     }
   }

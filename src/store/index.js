@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     // 1为本地环境、0为远程环境
-    nDev: 0
+    nDev: 1
     // nSelectColor: 0
   },
   actions: {

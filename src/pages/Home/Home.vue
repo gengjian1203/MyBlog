@@ -133,7 +133,7 @@ export default {
     },
     // 获取icon.json数据，回调函数
     getIconInfoSucc (res) {
-      console.log(res)
+      // console.log(res)
       const r = res.data
       if (r.ret && r.data) {
         const data = r.data
