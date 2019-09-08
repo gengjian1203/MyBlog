@@ -86,6 +86,14 @@
       "id": "20004",
       "name": "简单说一下js中的闭包",
       "path": "static/paper/paper_02_0004.md"
+    }, {
+      "id": "20005",
+      "name": "__proto__、prototype与constructor的关系",
+      "path": "static/paper/paper_02_0005.md"
+    }, {
+      "id": "20006",
+      "name": "面向对象模拟类的实现",
+      "path": "static/paper/paper_02_0006.md"
     }], [{
       "id": "30000",
       "name": "Vue-CLI 3.x创建工程及解读工程结构",
@@ -134,8 +142,12 @@
       "path": "static/paper/paper_07_0000.md"
     }, {
       "id": "70001",
-      "name": "关于工厂模式",
-      "path": "static/paper/Mould.md"
+      "name": "设计模式之单例模式",
+      "path": "static/paper/paper_07_0001.md"
+    }, {
+      "id": "70002",
+      "name": "设计模式之工厂模式",
+      "path": "static/paper/paper_07_0002.md"
     }], [{
       "id": "80000",
       "name": "关于better-scroll",
