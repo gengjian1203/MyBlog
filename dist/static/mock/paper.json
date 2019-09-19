@@ -110,6 +110,10 @@
       "id": "30003",
       "name": "Vuex的生命周期及使用",
       "path": "static/paper/paper_03_0003.md"
+    }, {
+      "id": "30004",
+      "name": "Vue中动态组件",
+      "path": "static/paper/paper_03_0004.md"
     }], [
 
     ], [{
@@ -128,14 +132,26 @@
       "id": "50003",
       "name": "WebStorage与cookie的相同点与不同点",
       "path": "static/paper/paper_05_0003.md"
+    }, {
+      "id": "50004",
+      "name": "同源策略",
+      "path": "static/paper/paper_05_0004.md"
+    }, {
+      "id": "50005",
+      "name": "跨域的几种方法",
+      "path": "static/paper/paper_05_0005.md"
+    }, {
+      "id": "50006",
+      "name": "简单说一说http协议",
+      "path": "static/paper/paper_05_0006.md"
     }], [{
       "id": "60000",
       "name": "数组的求和(reduce)",
       "path": "static/paper/paper_06_0000.md"
     }, {
       "id": "60001",
-      "name": "关于A*算法",
-      "path": "static/paper/Mould.md"
+      "name": "自动寻路之A*算法",
+      "path": "static/paper/paper_06_0001.md"
     }], [{
       "id": "70000",
       "name": "异步解决方案之Promise",

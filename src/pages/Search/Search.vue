@@ -135,7 +135,7 @@ export default {
     width: 88%;
     height: calc(@title-h - .2rem);
     line-height: calc(@title-h - .2rem);
-    color: #cccccc;
+    color: #333333;
     background: #ffffff;
     border-radius: @common-radius;
     padding: 0 .1rem;
