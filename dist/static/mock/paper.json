@@ -114,6 +114,10 @@
       "id": "30004",
       "name": "Vue中动态组件",
       "path": "static/paper/paper_03_0004.md"
+    }, {
+      "id": "30005",
+      "name": "简单讲讲Vue中插槽",
+      "path": "static/paper/paper_03_0005.md"
     }], [
 
     ], [{
