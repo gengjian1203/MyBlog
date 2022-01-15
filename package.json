@@ -18,7 +18,7 @@
     "fastclick": "^1.0.6",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "mavon-editor": "^2.7.5",
     "vue": "^2.5.2",
     "vue-awesome-swiper": "^2.6.7",
